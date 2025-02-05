@@ -14,7 +14,7 @@ export const downloadScreenshot = async () => {
     }
     const charWidth = 23 
     const canvasHeight = 50
-    const canvasWidth = (charWidth * searchText.length)+9
+    const canvasWidth = (charWidth * searchText.replace(/\s/g, '').length) + 9
 
     const tempCanvas = document.createElement('canvas')
     const context = tempCanvas.getContext('2d')
@@ -50,8 +50,6 @@ export const copyScreenshotToClipboard = async () => {
     }
 
     const searchText = searchBox.value
-    // console.log("searchText", searchText)
-    // console.log("Length of searchText:", searchText.length)
     if (!searchText) {
       console.error("No text found in search box")
       return
@@ -59,7 +57,7 @@ export const copyScreenshotToClipboard = async () => {
 
     const charWidth = 23 
     const canvasHeight = 50
-    const canvasWidth = (charWidth * searchText.length)+9
+    const canvasWidth = (charWidth * searchText.replace(/\s/g, '').length) + 9
 
     const tempCanvas = document.createElement('canvas')
     console.log("tempCanvas", tempCanvas)
