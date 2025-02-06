@@ -15,7 +15,9 @@
     "core-js": "^3.37.1",
     "devanagari-transliterate": "^1.0.0",
     "html2canvas": "^1.4.1",
+    "pica": "^9.0.1",
     "roboto-fontface": "*",
+    "smartcrop": "^2.0.5",
     "vue": "^3.4.31",
     "vuetify": "^3.6.11"
   },
